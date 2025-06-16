@@ -2,7 +2,7 @@
 
 This repository contains four deep learning-based projects for detecting cyberattacks in network traffic using various public datasets:
 
-1. **UNSW-NB15** – Unsupervised Autoencoder-based Anomaly Detection  
+1. **UNSW-NB15** – Deep Learning-Based Anomaly Detection  
 2. **KDD Cup 1999** – Multiclass Neural Network Classifier  
 3. **CIC-IDS 2017** – Binary Classifier for Attack vs Benign Traffic  
 4. **Kyoto 2006+** – Three-Class Fully Connected Neural Network Classifier
