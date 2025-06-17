@@ -184,6 +184,7 @@ Accuracy: 0.89
 Macro Avg F1-score: 0.68
 
 Weighted Avg F1-score: 0.89
+
 2. Random Forest Classifier
 Accuracy: 0.8932
 Macro Avg F1-score: Similar (as seen in the range of 0.39 to 0.98 across classes).
