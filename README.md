@@ -157,6 +157,65 @@ Planned extensions:
 - Integrate into a real-time traffic pipeline using **Kafka**, **Wireshark**, or **Zeek**
 
 ---
+## 📊 Intrusion detection systems with Supervised Learning
+This repository implements and evaluates supervised learning methods for network-based intrusion detection using four benchmark datasets.
+
+--- 
+## 1. CIC IDS‑2017
+Model Used: Multiclass classifier (likely RandomForest/XGBoost).
+
+## Results:
+
+Excellent performance: overall accuracy ≈ 99.83%.
+
+High precision and recall across all attack classes, though some rare classes (like XSS) had ill-defined precision and were set to zero (warning from sklearn.metrics) due to zero predictions.
+
+Balanced classification report with macro avg ≈ 0.83 and weighted avg ≈ 1.00.
+
+--- 
+## 2. NSL‑KDD Dataset Analysis
+🔍 Preprocessing:
+Low-variance features were removed using VarianceThreshold(threshold=0.01).
+
+ Models Used:
+1. XGBoost Classifier
+Accuracy: 0.89
+
+Macro Avg F1-score: 0.68
+
+Weighted Avg F1-score: 0.89
+2. Random Forest Classifier
+Accuracy: 0.8932
+Macro Avg F1-score: Similar (as seen in the range of 0.39 to 0.98 across classes).
+
+---
+## 3. UNSW‑NB15
+Approach 1: Direct classification (RandomForest/XGBoost).
+
+Accuracy only ≈ 54%.
+
+Class ‘0’ (benign) yielded precision ≈ 0.49, recall ≈ 0.66; class ‘1’ (attack) had precision ≈ 0.62, recall ≈ 0.45.
+
+Approach 2: SMOTE oversampling → Logistic Regression.
+
+SMOTE balanced both classes to ~119K samples each.
+
+Balanced performance: accuracy ≈ 64%, class ‘0’: precision 0.58/re 0.76, class ‘1’: precision 0.73/recall 0.55.
+
+Shows improvement for attack detection using oversampling and logistic regression.
+
+---
+## 4. Kyoto2006+
+Model Used: RandomForest.
+
+Results:
+
+Perfect performance on this dataset: accuracy = 1.00.
+
+Single-label problem (likely only benign or only attack), resulting in trivial 100% classification.
+
+---
+
 
 ## 🧾 License
 
