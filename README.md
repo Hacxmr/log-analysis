@@ -162,7 +162,7 @@ This repository implements and evaluates supervised learning methods for network
 
 --- 
 ## 1. CIC IDS‑2017
-Model Used: Multiclass classifier (likely RandomForest/XGBoost).
+Model Used: Multiclass classifier (RandomForest/XGBoost).
 
 ## Results:
 
